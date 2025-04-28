@@ -21,12 +21,12 @@ const FooterStyle = styled.footer`
 
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 15px;
   border-top: 1px solid ${({ theme }) => theme.color.background};
 
   .logo {
     img {
-      width: 140px;
+      width: 80px;
     }
   }
 

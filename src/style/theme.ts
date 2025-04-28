@@ -52,7 +52,7 @@ export const light: Theme = {
   color: {
     primary: "brown",
     background: "lightgray",
-    secondary: "blue",
+    secondary: "gray",
     third: "green",
     border: "grey",
     text: "black",

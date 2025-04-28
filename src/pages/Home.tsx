@@ -5,13 +5,13 @@ import Title from "../components/common/Title";
 function Home() {
   return (
     <>
-      <Title size="medium" color="background">
+      {/* <Title size="medium" color="background">
         제목테스트
       </Title>
       <Button size="large" scheme="normal">
         버튼 테스트
       </Button>
-      <InputText placeholder="여기에 입력하세요" />
+      <InputText placeholder="여기에 입력하세요" /> */}
       <div>HOME BODY</div>
     </>
   );

@@ -11,7 +11,7 @@ export const GlobalStyle = createGlobalStyle<Props>`
     padding: 0;
     margin: 0;
     background-color: ${(props) =>
-      props.themeName === "light" ? "white" : "black"}
+      props.themeName === "light" ? "white" : "black"};
   }
 
   h1 {

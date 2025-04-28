@@ -11,7 +11,7 @@ interface State {
   toggleTheme: () => void;
 }
 export const state = {
-  themeName: "light" as ThemeName,
+  themeName: DEFAULT_THEME_NAME as ThemeName,
   toggleTheme: () => {},
 };
 
@@ -22,7 +22,7 @@ export const BookStoreThemeProvider = ({
 }: {
   children: ReactNode;
 }) => {
-  const [themeName, setThemeName] = useState<ThemeName>("light");
+  const [themeName, setThemeName] = useState<ThemeName>(DEFAULT_THEME_NAME);
 
   const toggleTheme = () => {
     setThemeName(themeName === "light" ? "dark" : "light");
