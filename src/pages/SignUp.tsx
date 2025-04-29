@@ -14,7 +14,7 @@ export interface SignupProps {
 }
 
 function Signup() {
-  const showAlert = useAlert();
+  const { showAlert } = useAlert();
   const navigate = useNavigate();
 
   const {
