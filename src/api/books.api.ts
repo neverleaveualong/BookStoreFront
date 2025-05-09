@@ -9,13 +9,16 @@ interface FetchBooksParams {
   limit: number;
 }
 
-interface FetchBooksResponse {
+export interface FetchBooksResponse {
   books: Book[];
   pagination: Pagination;
 }
 
-export const fetchBooks = async (params: FetchBooksParams) => {
+export const fetchBooks = async (
+  params: FetchBooksParams
+): Promise<FetchBooksResponse> => {
   try {
+    console.log("Fetching books with params:", params); // 추가: 요청된 파라미터 로그
     const response = await httpClient.get<FetchBooksResponse>("/books", {
       params: params,
     });
@@ -43,6 +46,12 @@ export const likeBook = async (bookId: number) => {
 
 export const unlikeBook = async (bookId: number) => {
   const response = await httpClient.delete(`/likes/${bookId}`);
+
+  return response.data;
+};
+
+export const fetchBestBooks = async () => {
+  const response = await httpClient.get<Book[]>(`/books/best`);
 
   return response.data;
 };
